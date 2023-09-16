@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="./image/favicon.ico">
+
+
   <title>cssMemeSlider</title>
 </head>
+
 <body>
-  
+  <div class="_container">
+
+    <div class="slider">
+
+      <input type="radio" name="input-radio" id="input-one" checked>
+      <input type="radio" name="input-radio" id="input-two">
+      <input type="radio" name="input-radio" id="input-three">
+      <input type="radio" name="input-radio" id="input-four">
+
+      <div class="slider-images">
+        <img src="./image/01.png" alt="mem01" class="image-one">
+        <img src="./image/02.png" alt="mem02" class="image-two">
+        <img src="./image/03.png" alt="mem03" class="image-three">
+        <img src="./image/04.png" alt="mem04" class="image-four">
+      </div>
+
+      <div class="slider-block">
+
+        <div class="slider-text">
+          <p class="text-one">Но.. я однопоточный</p>
+          <p class="text-two">Когда тебе объясняют...</p>
+          <p class="text-three">Потребность пользователя</p>
+          <p class="text-four">Где кнопка "зарплата"?</p>
+        </div>
+
+        <div class="slider-paginations">
+          <label for="input-one" class="label-one">
+            <span class="span-one"></span>
+          </label>
+          <label for="input-two" class="label-two">
+            <span class="span-two"></span>
+          </label>
+          <label for="input-three" class="label-three">
+            <span class="span-three"></span>
+          </label>
+          <label for="input-four" class="label-four">
+            <span class="span-four"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
