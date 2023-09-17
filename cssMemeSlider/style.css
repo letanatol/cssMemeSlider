@@ -1,0 +1,246 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #8da288;
+  width: 100%;
+  height: 100%;
+  color: #1c1c1c;
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+._container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  width: 45rem;
+  overflow: hidden;
+  padding: 1rem;
+  margin: 1.5rem;
+  border: 0.2rem #395729 solid;
+  border-radius: 1rem;
+  box-shadow: 0rem 0.31rem 0.63rem 0rem rgba(43, 56, 36, 0.742);
+}
+
+@media (max-width: 820px) {
+  .slider {
+    width: 40rem;
+  }
+}
+
+[type="radio"] {
+  display: none;
+}
+
+.slider-images {
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: all 0.5s;
+  border: 0.2rem #395729 solid;
+  border-radius: 1rem;
+  box-shadow: 0rem 0.31rem 0.63rem 0rem rgba(43, 56, 36, 0.742);
+}
+
+.slider-line {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 500%;
+}
+
+.slider-image-block {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-line img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#input-one:checked~.slider-images .slider-line .slider-image-block {
+  transform: translateX(0);
+  transition: all 0.5s;
+}
+
+#input-two:checked~.slider-images .slider-line .slider-image-block {
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
+
+#input-three:checked~.slider-images .slider-line .slider-image-block {
+  transform: translateX(-200%);
+  transition: all 0.5s;
+}
+
+#input-four:checked~.slider-images .slider-line .slider-image-block {
+  transform: translateX(-300%);
+  transition: all 0.5s;
+}
+
+#input-five:checked~.slider-images .slider-line .slider-image-block {
+  transform: translateX(-400%);
+  transition: all 0.5s;
+}
+
+.slider-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 630px) {
+  .slider-block {
+    flex-direction: column-reverse;
+    align-items: baseline;
+  }
+}
+
+.slider-text {
+  width: 35rem;
+  overflow: hidden;
+}
+
+@media (max-width: 630px) {
+  .slider-text {
+    margin-top: 1rem;
+  }
+}
+
+.slider-text-line {
+  display: block;
+  flex-wrap: nowrap;
+  width: 800%;
+}
+
+@media (max-width: 820px) {
+  .slider-text-line {
+    width: 800%;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-text-line {
+    width: 1500%;
+  }
+}
+
+.slider-text-line>p {
+  display: inline-block;
+  width: 40rem;
+}
+
+#input-one:checked~.slider-block .slider-text .slider-text-line {
+  transform: translateX(0%);
+  transition: all 0.5s;
+}
+
+#input-two:checked~.slider-block .slider-text .slider-text-line {
+  transform: translateX(-40rem);
+  transition: all 0.5s;
+}
+
+#input-three:checked~.slider-block .slider-text .slider-text-line {
+  transform: translateX(-80rem);
+  transition: all 0.5s;
+}
+
+#input-four:checked~.slider-block .slider-text .slider-text-line {
+  transform: translateX(-120rem);
+  transition: all 0.5s;
+}
+
+#input-five:checked~.slider-block .slider-text .slider-text-line {
+  transform: translateX(-161rem);
+  transition: all 0.5s;
+}
+
+.slider-paginations {
+  display: flex;
+}
+
+@media (max-width: 630px) {
+  .slider-paginations {
+    align-self: center;
+  }
+}
+
+.slider-paginations label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.slider-paginations label span {
+  height: 1.1rem;
+  width: 1.1rem;
+  border-radius: 50%;
+  background-color: #395729;
+  border: solid #395729 0.2rem;
+  transition: all 0.5s;
+}
+
+@media(hover: hover) {
+  .slider-paginations label:hover span {
+    background-color: #ffffff;
+    border: solid #ffffff 0.2rem;
+    transition: all 0.5s;
+  }
+}
+
+#input-one:active~.slider-block .slider-paginations .label-one .span-one,
+#input-two:active~.slider-block .slider-paginations .label-two .span-two,
+#input-three:active~.slider-block .slider-paginations .label-three .span-three,
+#input-four:active~.slider-block .slider-paginations .label-four .span-four,
+#input-five:active~.slider-block .slider-paginations .label-five .span-five {
+  background-color: #d7da22;
+  border: solid #d7da22 0.2rem;
+  transition: all 0s;
+}
+
+#input-one:checked~.slider-block .slider-paginations .label-one .span-one,
+#input-two:checked~.slider-block .slider-paginations .label-two .span-two,
+#input-three:checked~.slider-block .slider-paginations .label-three .span-three,
+#input-four:checked~.slider-block .slider-paginations .label-four .span-four,
+#input-five:checked~.slider-block .slider-paginations .label-five .span-five {
+  background-color: transparent;
+  transition: all 0.5s;
+}
+
+@media(hover: hover) {
+
+  #input-one:checked~.slider-block .slider-paginations .label-one:hover .span-one,
+  #input-two:checked~.slider-block .slider-paginations .label-two:hover .span-two,
+  #input-three:checked~.slider-block .slider-paginations .label-three:hover .span-three,
+  #input-four:checked~.slider-block .slider-paginations .label-four:hover .span-four,
+  #input-five:checked~.slider-block .slider-paginations .label-five:hover .span-five {
+    border: solid #ffffff 0.2rem;
+    transition: all 0.5s;
+  }
+}
