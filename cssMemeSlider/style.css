@@ -16,7 +16,6 @@ body {
   font-family: Inter, sans-serif;
   font-weight: 700;
   font-size: 1.25rem;
-  transition: all 0.4s;
 }
 
 ._container {
@@ -42,7 +41,16 @@ body {
 }
 
 .slider-images img {
-  object-fit: contain;
+  object-fit: cover;
+}
+
+#input-one:checked~.slider-images .image-one {
+}
+
+#input-two:checked~.slider-images .image-two {
+}
+
+#input-three:checked~.slider-images .image-three {
 }
 
 .slider-block {
@@ -67,6 +75,8 @@ body {
   align-items: center;
   width: 2rem;
   height: 2rem;
+  background-color: transparent;
+  transition: all 1s;
   cursor: pointer;
 }
 
@@ -76,14 +86,25 @@ body {
   border-radius: 50%;
   background-color: #395729;
   border: solid #395729 0.2rem;
+  transition: all 1s;
 }
 
 @media(hover: hover) {
   .slider-paginations label:hover span {
     background-color: #ffffff;
     border: solid #ffffff 0.2rem;
-    transition: all 0.4s;
+    transition: all 1s;
   }
+}
+
+#input-one:active~.slider-block .slider-paginations .label-one .span-one,
+#input-two:active~.slider-block .slider-paginations .label-two .span-two,
+#input-three:active~.slider-block .slider-paginations .label-three .span-three,
+#input-four:active~.slider-block .slider-paginations .label-four .span-four,
+#input-five:active~.slider-block .slider-paginations .label-five .span-five {
+  background-color: #d7da22;
+  border: solid #d7da22 0.2rem;
+  transition: all 0s;
 }
 
 #input-one:checked~.slider-block .slider-paginations .label-one .span-one,
@@ -91,8 +112,8 @@ body {
 #input-three:checked~.slider-block .slider-paginations .label-three .span-three,
 #input-four:checked~.slider-block .slider-paginations .label-four .span-four,
 #input-five:checked~.slider-block .slider-paginations .label-five .span-five {
-  background-color: #000000;
-  transition: all 0.4s;
+  background-color: transparent;
+  transition: all 1s;
 }
 
 @media(hover: hover) {
@@ -102,8 +123,7 @@ body {
   #input-three:checked~.slider-block .slider-paginations .label-three:hover .span-three,
   #input-four:checked~.slider-block .slider-paginations .label-four:hover .span-four,
   #input-five:checked~.slider-block .slider-paginations .label-five:hover .span-five {
-    background-color: #000000;
     border: solid #ffffff 0.2rem;
-    transition: all 0.4s;
+    transition: all 1s;
   }
 }
