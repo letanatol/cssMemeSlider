@@ -39,10 +39,10 @@ body {
   height: 38rem;
   margin-bottom: 1rem;
   overflow: hidden;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
-.slider-line{
+.slider-line {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,25 +54,27 @@ body {
 
 #input-one:checked~.slider-images .slider-line {
   transform: translateX(0);
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 #input-two:checked~.slider-images .slider-line {
   transform: translateX(-20%);
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 #input-three:checked~.slider-images .slider-line {
   transform: translateX(-40%);
-  transition: all 1s;
+  transition: all 0.5s;
 }
+
 #input-four:checked~.slider-images .slider-line {
   transform: translateX(-60%);
-  transition: all 1s;
+  transition: all 0.5s;
 }
+
 #input-five:checked~.slider-images .slider-line {
   transform: translateX(-80%);
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 .slider-block {
@@ -83,8 +85,44 @@ body {
 }
 
 .slider-text {
-  height: 1.5rem;
+  width: 35rem;
   overflow: hidden;
+}
+
+.slider-text-line {
+  display: block;
+  flex-wrap: nowrap;
+  width: 600%;
+}
+
+.slider-text-line > p {
+  display: inline-block;
+  width: 40rem;
+}
+
+#input-one:checked~.slider-block .slider-text .slider-text-line {
+  transform: translateX(0%);
+  transition: all 0.5s;
+}
+
+#input-two:checked~.slider-block .slider-text .slider-text-line {
+  transform: translateX(-40rem);
+  transition: all 0.5s;
+}
+
+#input-three:checked~.slider-block .slider-text .slider-text-line {
+  transform: translateX(-80rem);
+  transition: all 0.5s;
+}
+
+#input-four:checked~.slider-block .slider-text .slider-text-line {
+  transform: translateX(-120rem);
+  transition: all 0.5s;
+}
+
+#input-five:checked~.slider-block .slider-text .slider-text-line {
+  transform: translateX(-161rem);
+  transition: all 0.5s;
 }
 
 .slider-paginations {
@@ -98,7 +136,7 @@ body {
   width: 2rem;
   height: 2rem;
   background-color: transparent;
-  transition: all 1s;
+  transition: all 0.5s;
   cursor: pointer;
 }
 
@@ -108,14 +146,14 @@ body {
   border-radius: 50%;
   background-color: #395729;
   border: solid #395729 0.2rem;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 @media(hover: hover) {
   .slider-paginations label:hover span {
     background-color: #ffffff;
     border: solid #ffffff 0.2rem;
-    transition: all 1s;
+    transition: all 0.5s;
   }
 }
 
@@ -135,7 +173,7 @@ body {
 #input-four:checked~.slider-block .slider-paginations .label-four .span-four,
 #input-five:checked~.slider-block .slider-paginations .label-five .span-five {
   background-color: transparent;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 @media(hover: hover) {
@@ -146,6 +184,6 @@ body {
   #input-four:checked~.slider-block .slider-paginations .label-four:hover .span-four,
   #input-five:checked~.slider-block .slider-paginations .label-five:hover .span-five {
     border: solid #ffffff 0.2rem;
-    transition: all 1s;
+    transition: all 0.5s;
   }
 }
