@@ -85,3 +85,25 @@ body {
     transition: all 0.4s;
   }
 }
+
+#input-one:checked~.slider-block .slider-paginations .label-one .span-one,
+#input-two:checked~.slider-block .slider-paginations .label-two .span-two,
+#input-three:checked~.slider-block .slider-paginations .label-three .span-three,
+#input-four:checked~.slider-block .slider-paginations .label-four .span-four,
+#input-five:checked~.slider-block .slider-paginations .label-five .span-five {
+  background-color: #000000;
+  transition: all 0.4s;
+}
+
+@media(hover: hover) {
+
+  #input-one:checked~.slider-block .slider-paginations .label-one:hover .span-one,
+  #input-two:checked~.slider-block .slider-paginations .label-two:hover .span-two,
+  #input-three:checked~.slider-block .slider-paginations .label-three:hover .span-three,
+  #input-four:checked~.slider-block .slider-paginations .label-four:hover .span-four,
+  #input-five:checked~.slider-block .slider-paginations .label-five:hover .span-five {
+    background-color: #000000;
+    border: solid #ffffff 0.2rem;
+    transition: all 0.4s;
+  }
+}
