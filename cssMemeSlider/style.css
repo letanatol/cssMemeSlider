@@ -35,22 +35,44 @@ body {
 
 .slider-images {
   display: flex;
+  width: 50rem;
   height: 38rem;
   margin-bottom: 1rem;
   overflow: hidden;
+  transition: all 1s;
 }
 
-.slider-images img {
+.slider-line{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-line img {
   object-fit: cover;
 }
 
-#input-one:checked~.slider-images .image-one {
+#input-one:checked~.slider-images .slider-line {
+  transform: translateX(0);
+  transition: all 1s;
 }
 
-#input-two:checked~.slider-images .image-two {
+#input-two:checked~.slider-images .slider-line {
+  transform: translateX(-20%);
+  transition: all 1s;
 }
 
-#input-three:checked~.slider-images .image-three {
+#input-three:checked~.slider-images .slider-line {
+  transform: translateX(-40%);
+  transition: all 1s;
+}
+#input-four:checked~.slider-images .slider-line {
+  transform: translateX(-60%);
+  transition: all 1s;
+}
+#input-five:checked~.slider-images .slider-line {
+  transform: translateX(-80%);
+  transition: all 1s;
 }
 
 .slider-block {
